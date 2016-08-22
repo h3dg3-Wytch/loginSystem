@@ -1,0 +1,1 @@
+CREATE TABLE contact(integer ID, BLOB text, set var_char = 5);

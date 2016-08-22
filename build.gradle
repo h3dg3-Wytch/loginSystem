@@ -1,0 +1,44 @@
+buildscript{
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'gs-serving-web-content'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+springBoot {
+    mainClass = "Hello.Application"
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.hibernate:hibernate-validator")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '1.4.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-orm', version: '4.3.2.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.16'
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
