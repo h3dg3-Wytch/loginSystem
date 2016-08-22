@@ -9,6 +9,8 @@ gradle/
 gradlew
 gradlew.bat
 
+login.*
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
