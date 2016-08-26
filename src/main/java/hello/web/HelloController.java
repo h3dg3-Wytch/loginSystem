@@ -25,7 +25,7 @@ public class HelloController {
         User user = new User("Hello", "World");
         userRepository.save(user);
         for(User world: userRepository.findByLastName("World")){
-            System.out.println(world.toString());
+            log.info(world.toString());
         }
         return "home";
     }
