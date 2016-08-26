@@ -24,8 +24,21 @@ public class HelloController {
         for(User world: userRepository.findByLastName("World")){
             System.out.println(world.toString());
         }
+        return "home";
+    }
 
+    @RequestMapping("/home")
+    public String home(){
+        return "home";
+    }
+
+    @RequestMapping("/hello")
+    public String hello(){
         return "hello";
     }
 
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 }

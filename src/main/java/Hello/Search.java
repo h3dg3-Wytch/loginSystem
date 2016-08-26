@@ -18,6 +18,10 @@ public class Search {
     @Autowired
     protected JdbcTemplate jdbc;
 
+    public Search(){
+
+    }
+
 
 
 
