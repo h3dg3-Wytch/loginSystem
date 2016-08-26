@@ -21,8 +21,10 @@ public class HelloController {
     public String helloWorldGet(Model model){
         User user = new User("Hello", "World");
         userRepository.save(user);
-        user = (User) userRepository.findByLastName("World");
-        System.out.println(user.toString());
+        for(User world: userRepository.findByLastName("World")){
+            System.out.println(world.toString());
+        }
+
         return "hello";
     }
 
