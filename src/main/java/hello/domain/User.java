@@ -1,6 +1,5 @@
-package Hello;
+package hello.domain;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 
 /**
